@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+@mixin animate($animation, $duration, $method, $times){
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(120deg, #ef8205, #8e44ad);
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+}
+
+.slogan {
+	position: absolute;
+	top: 42%;
+	left: 5%;
+	font-weight: 500;
+	color: #f0ffff;
+	font-size: 64px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	animation-delay: 1.7s;
+
+    @include keyframes(showsUp){
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    @include animate(showsUp, 2s, linear, 1);
+}
+
+.signIn__banner {
+    @include keyframes(slide){
+        from {
+            left: -40%;
+        }
+    
+        to {
+            left: 0;
+        }
+    }
+    @include animate(slide, 1s, linear, 1);
+
+	background-image: url(../images/basquete.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 40%;
+    left: 0;
+	height: 100vh;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container-messages {
+    width: 90%;
+    margin: 10px auto 0;
+    text-align: center;
+    border-radius: 5px;
+
+    &.error {
+        background-color: #fca5a5;
+        color: #dc2626;
+    }
+
+    p {
+        padding: 10px 0;
+    }
+}
+
+form {
+	padding: 0 40px;
+	box-sizing: border-box;
+
+    .form-row {
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin: 30px 0;
+
+        input {
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+
+            &:focus ~ label, &:valid ~ label {
+                top: -5px;
+                color: #ef8205;
+            } 
+
+            &:focus ~ span::before, &:valid ~ span::before {
+                width: 100%;
+            }
+        }
+
+        label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            color: #adadad;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        span::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #ef8205;
+            transition: .5s;
+        }
+    }
+}
+
+.forgot-password {
+	margin: -5px 0 20px 5px;
+	color: #a6a6a6;
+	cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    width: 100%;
+	height: 50px;
+	border: 1px solid;
+	background: #ef8205;
+	border-radius: 25px;
+	font-size: 18px;
+	color: #e9f4fb;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+
+    &:hover {
+        border-color: #ef8205;
+        transition: .5s;
+    }
+}
+
+.signup {
+	margin: 30px 0;
+	text-align: center;
+	font-size: 16px;
+	color: #181818;
+
+    a {
+        color: #ef8205;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
