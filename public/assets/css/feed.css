@@ -1,0 +1,486 @@
+@import url("nav.css");
+a {
+  color: inherit;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[15];
+      grid-template-columns: repeat(15, 1fr);
+  color: #626262;
+}
+
+nav.menu {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+}
+
+nav.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 20px;
+  width: 50%;
+  margin: 20px auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+}
+
+nav.menu ul li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+nav.menu ul li a i {
+  color: #3b82f6;
+}
+
+section.container {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 7;
+  grid-column: 5 / 12;
+  margin-bottom: 50px;
+}
+
+section.container > div {
+  background-color: #FFF;
+  width: 80%;
+  border-radius: 10px;
+  margin: 25px auto 0;
+  padding: 10px 30px;
+}
+
+section.container > div.add-post {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+}
+
+section.container > div.add-post img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  width: 40px;
+  border-radius: 50%;
+}
+
+section.container > div.add-post .name {
+  grid-column: 2 / -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  font-weight: 600;
+}
+
+section.container > div.add-post small {
+  grid-column: 2 / -1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  font-size: 0.8em;
+}
+
+section.container > div.add-post textarea {
+  grid-column: 2 / -1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  resize: none;
+}
+
+section.container > div.add-post ul {
+  grid-column: 2 / -1;
+  grid-row: 4 / -1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.container > div.add-post ul li .fa-video {
+  color: #f97316;
+}
+
+section.container > div.add-post ul li .fa-camera {
+  color: #2563eb;
+}
+
+section.container > div.add-post ul li .fa-face-smile {
+  color: #22c55e;
+}
+
+section.container > div.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+section.container > div.post div.header {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.container > div.post div.header > div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+section.container > div.post div.header > div img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+section.container > div.post div.header > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+section.container > div.post div.header > div > div span {
+  font-weight: 600;
+}
+
+section.container > div.post div.header > div > div small {
+  font-size: 0.8em;
+}
+
+section.container > div.post .post-text {
+  text-align: justify;
+  font-size: 0.9em;
+  padding: 15px 0;
+  color: #9a9a9a;
+}
+
+section.container > div.post img {
+  border-radius: 10px;
+}
+
+section.container > div.post ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+aside {
+  grid-column: 12 / -1;
+  background-color: #e5efef;
+}
+
+aside .servicos {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 30px;
+  margin-top: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+}
+
+aside .servicos > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+aside .servicos > div a {
+  color: #ef8205;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+aside .servicos img {
+  max-width: 100%;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+aside .amigos {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 310px;
+}
+
+aside .amigos > div {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+aside .amigos > div a {
+  color: #ef8205;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+aside .amigos ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+aside .amigos ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+aside .amigos ul li img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+aside .amigos ul li.online {
+  position: relative;
+}
+
+aside .amigos ul li.online::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #41db51;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+section.container-chat {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: fixed;
+  bottom: 30px;
+}
+
+section.container-chat .chat {
+  width: 350px;
+  height: 320px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: none;
+}
+
+section.container-chat .chat div.header {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ef8205;
+  color: #FFF;
+  font-size: 0.9em;
+  padding: 3px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section.container-chat .chat div.header .fa-xmark {
+  cursor: pointer;
+}
+
+section.container-chat .chat .content {
+  background-color: #FFF;
+  height: 100%;
+  padding: 10px 0;
+}
+
+section.container-chat .chat .content > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 15px;
+  text-align: left;
+  margin: 0 5px 20px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+section.container-chat .chat .content > ul::-webkit-scrollbar {
+  width: 5px;
+}
+
+section.container-chat .chat .content > ul::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 20px;
+}
+
+section.container-chat .chat .content > ul > li {
+  padding: 3px 20px;
+  font-size: 0.9em;
+  max-width: 80%;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #FFF;
+}
+
+section.container-chat .chat .content > ul > li:last-of-type {
+  margin-bottom: 50px;
+}
+
+section.container-chat .chat .content > ul > li.received {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #60a5fa;
+}
+
+section.container-chat .chat .content > ul > li.sent {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #d1d5db;
+}
+
+section.container-chat .chat .content > ul > li > .text {
+  padding: 5px 0;
+}
+
+section.container-chat .chat .content > ul > li > .infos {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 0.8em;
+}
+
+section.container-chat .chat .content div.footer {
+  width: 350px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  padding: 5px;
+}
+
+section.container-chat .chat .content div.footer textarea {
+  width: 80%;
+  border: 1px solid #ccc;
+  background: transparent;
+  resize: none;
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+section.container-chat .chat .content div.footer textarea:focus {
+  outline: 0;
+}
+
+section.container-chat .chat .content div.footer button[type="submit"] {
+  color: #2563eb;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=feed.css.map */

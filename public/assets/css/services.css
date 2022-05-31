@@ -1,0 +1,115 @@
+@import url("nav.css");
+a {
+  color: inherit;
+}
+
+nav.menu {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+}
+
+nav.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 20px;
+  width: 50%;
+  margin: 20px auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+}
+
+nav.menu ul li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+nav.menu ul li a i {
+  color: #3b82f6;
+}
+
+/* CARDS */
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #626262;
+    width: 100%;
+    height: 93vh;
+}
+
+.card1{
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 18px rgba(28, 40, 63, 0.416);
+    margin: 0 10px 0 200px;
+}
+
+.card2{
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 18px rgba(28, 40, 63, 0.416);
+    margin: 0 10px 0 10px;
+}
+
+.card3{
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 18px rgba(28, 40, 63, 0.416);
+    margin: 0 200px 0 10px;
+}
+
+.img-card1{
+    background: url(../images/feed/cuidadores.jpg) center/cover;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.img-card2{
+    background: url(../images/feed/psicologo.jpg) center/cover;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.img-card3{
+    background: url(../images/feed/conversa.jpg) center/cover;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-details{
+    padding: 15px;
+}
+
+.card-btn-maisDetalhes{
+    background: linear-gradient(120deg, #ef8205, #8e44ad);
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
